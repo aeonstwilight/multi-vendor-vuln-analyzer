@@ -23,25 +23,17 @@ Nessus Vuln Report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 
 ## Installation
 
-1. Clone the repository:
+### Running the Executable (Windows)
 
-```bash
-git clone https://github.com/aeonstwilight/nessus-vuln-report.git
-cd nessus-vuln-report
-```
-Create and activate a virtual environment:
-python -m venv venv
-venv\Scripts\activate       # Windows
-pip install -r requirements.txt
+1. Download `NessusVulnReport.zip` from the [Releases](https://github.com/YOUR_USERNAME/nessus-vuln-report/releases) page.  
+2. Extract the folder anywhere.  
+3. Run `app.exe` from the extracted folder.
 
 
 
-Usage
+## Usage
 
-Run the desktop application:
-
-python app.py
-
+###
 
 Upload your Nessus CSV file.
 
