@@ -1,11 +1,26 @@
-# Python
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-env/
+*.py[cod]
+*$py.class
+
+# Virtual environments
 venv/
-*.egg-info/
-dist/
+env/
+.venv/
+
+# Distribution / packaging
 build/
+dist/
+*.egg-info/
 *.spec
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# PyInstaller files
+*.exe
+*.manifest
+*.log
