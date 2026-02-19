@@ -25,7 +25,7 @@ nessus-vuln-report is a **lightweight desktop tool** for analyzing Nessus CSV vu
 ```bash
 git clone https://github.com/YOUR_USERNAME/nessus-vuln-report.git
 cd nessus-vuln-report
-
+```
 python -m venv venv
 venv\Scripts\activate       # Windows
 pip install -r requirements.txt
