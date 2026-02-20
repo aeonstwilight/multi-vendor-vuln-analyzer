@@ -57,29 +57,19 @@ Run `app.exe` from the extracted folder.
 
 ## Usage
 - Upload a CSV file from Nessus, Qualys, or Rapid7.
-
 - Optionally select a vendor override.
-
 - Choose a compliance profile.
-
 - Click Analyze to view metrics and risk score.
-
 - View enriched table and visualizations.
-
 - Click Download Cleaned CSV to save the processed report.
 
 Scan Comparison
 
 - Upload an old scan CSV and a new scan CSV.
-
 - Click Compare Scans to view:
-
   - New vulnerabilities
-
   - Resolved vulnerabilities
-
   - Unchanged vulnerabilities
-
 - Download comparison results via CSV.
 
 ## License
