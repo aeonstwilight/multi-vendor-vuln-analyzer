@@ -228,6 +228,9 @@ while True:
         except Exception as e:
             sg.popup_error(f"Error processing file:\n{e}")
 
+
+
+
     # ----------------------------
     # Scan Comparison
     # ----------------------------
@@ -266,6 +269,76 @@ while True:
 
         except Exception as e:
             sg.popup_error(f"Error comparing scans:\n{e}")
+
+# ----------------------------
+# Charts
+# ----------------------------
+    if event == "Show Severity Pie Chart":
+        if df_cleaned is None:
+            sg.popup_error("Please run Analyze first.")
+            continue
+
+        severity_counts = df_cleaned["Severity"].value_counts().reset_index()
+        severity_counts.columns = ["Severity", "Count"]
+
+        fig = px.pie(
+            severity_counts,
+            names="Severity",
+            values="Count",
+            title="Vulnerability Severity Distribution"
+        )
+        fig.show()
+
+    if event == "Show Top 5 Hosts":
+        if df_cleaned is None:
+            sg.popup_error("Please run Analyze first.")
+            continue
+
+        top_hosts = (
+            df_cleaned["Host"]
+            .value_counts()
+            .head(5)
+            .reset_index()
+        )
+        top_hosts.columns = ["Host", "Count"]
+
+        fig = px.bar(
+            top_hosts,
+            x="Host",
+            y="Count",
+            title="Top 5 Hosts by Vulnerability Count"
+        )
+        fig.show()
+
+    if event == "Show Aging Buckets":
+        if df_cleaned is None:
+            sg.popup_error("Please run Analyze first.")
+            continue
+
+        bins = [0, 30, 60, 90, 180, 365, 10000]
+        labels = ["0-30", "31-60", "61-90", "91-180", "181-365", "365+"]
+
+        df_cleaned["Aging Bucket"] = pd.cut(
+            df_cleaned["Age_Days"],
+            bins=bins,
+            labels=labels
+        )
+
+        bucket_counts = (
+            df_cleaned["Aging Bucket"]
+            .value_counts()
+            .sort_index()
+            .reset_index()
+        )
+        bucket_counts.columns = ["Aging Bucket", "Count"]
+
+        fig = px.bar(
+            bucket_counts,
+            x="Aging Bucket",
+            y="Count",
+            title="Vulnerability Aging Distribution"
+        )
+        fig.show()
 
     # ----------------------------
     # Download buttons
