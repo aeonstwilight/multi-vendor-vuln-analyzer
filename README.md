@@ -53,7 +53,8 @@ Clone the repository:
 
 Windows Executable: You can also download the pre-built .exe release from the GitHub [Releases](https://github.com/aeonstwilight/multi-vendor-vuln-analyzer/releases) page. No Python installation is required.
 Extract the folder anywhere.  
-Run `app.exe` from the extracted folder.
+Run `Multi-Vendor.Vulnerability.Analyzer.exe
+` from the extracted folder.
 
 ## Usage
 - Upload a CSV file from Nessus, Qualys, or Rapid7.
