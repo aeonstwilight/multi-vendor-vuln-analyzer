@@ -72,6 +72,13 @@ Scan Comparison
   - Unchanged vulnerabilities
 - Download comparison results via CSV.
 
+## Screenshots
+
+<img width="1199" height="723" alt="Analysis" src="https://github.com/user-attachments/assets/5e633be0-80f9-4730-82dc-41a1727f54f6" />
+<img width="1914" height="1031" alt="Charts" src="https://github.com/user-attachments/assets/0c57fc0a-9d7e-44cc-9089-cfcccb2684d8" />
+<img width="1198" height="726" alt="Compare" src="https://github.com/user-attachments/assets/cdc6e588-7f01-422a-a263-3ee26f0629a7" />
+
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
